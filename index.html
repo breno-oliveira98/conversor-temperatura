@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <title>Conversor de Temperatura</title>
+    <title>Conversor de Graus</title>
 </head>
 <body>
     <div class="container">
-        <h2>Conversor de Temperatura</h2>
-        <fieldset>
-            <legend>Graus</legend>
-            <input type="number" id="inputTemperatura" placeholder="Digite a temperatura aqui">
-            <select id="deUidade">
+
+        <div class="converter">
+            <h1>Conversor de Graus</h1>
+            <input type="number" id="inputTemperatura" placeholder="Digite a temperatura desejada">
+            <select id="selectUnidade">
                 <option value="celsius">Celsius (°C)</option>
                 <option value="fahrenheit">Fahrenheit (°F)</option>
             </select>
-        </fieldset>
+            <button id="btn-inverter" onclick="inverterSelect()">
+                <ion-icon name="swap-vertical-outline"></ion-icon>
+            </button>
+            <select id="selectUnidade2">
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="celsius">Celsius (°C)</option>
+            </select>
+            <div class="btn-group">
+                <button id="btn-converter" onclick="converterTemperatura()">Converter</button>
+                <button id="btn-limpar" onclick="limparCampos()">Limpar</button>
+            </div>
+        </div>
+
+        <div id="resultado"></div>
     </div>
 
-
     <script src="assets/js/script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
